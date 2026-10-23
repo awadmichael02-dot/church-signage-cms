@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+  <interface>
+    <field id="screenId" type="string" value="lobby" />
+  </interface>
+  <children>
+    <Rectangle width="1920" height="1080" color="0x101820FF" />
+    <Label id="status" text="Church Signage — connecting player..." translation="[80,80]" width="1760" height="90" />
+    <Label id="ticker" text="Your church announcement will appear here" translation="[80,940]" width="1760" height="80" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+</component>

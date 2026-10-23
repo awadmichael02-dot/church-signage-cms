@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Church Signage CMS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">CHURCH DIGITAL SIGNAGE</p><h1>Screen Manager</h1></div>
+    <span class="pill">No watermark · Custom</span>
+  </header>
+  <main>
+    <section class="notice">
+      <strong>Starter dashboard</strong>
+      <p>This UI is a scaffold. Connect Supabase and enable sign-in before publishing or uploading content.</p>
+    </section>
+    <section class="panel">
+      <h2>Choose a screen</h2>
+      <div class="screen-grid">
+        <button class="screen active" data-screen="lobby"><span>Screen 1</span><strong>Lobby</strong><small>ID: lobby</small></button>
+        <button class="screen" data-screen="sanctuary"><span>Screen 2</span><strong>Sanctuary</strong><small>ID: sanctuary</small></button>
+      </div>
+      <p id="selected">Editing: Lobby</p>
+    </section>
+    <section class="panel">
+      <h2>Scrolling announcement</h2>
+      <label for="ticker">Announcement text</label>
+      <input id="ticker" placeholder="Welcome! Sunday service begins at 10:00 AM">
+      <button id="saveTicker" class="primary">Save announcement (demo)</button>
+      <p class="hint">Demo only: this starter page does not save remotely until Supabase integration is completed.</p>
+    </section>
+    <section class="panel">
+      <h2>Slides and playlists</h2>
+      <p>Planned controls: upload an image, set slide duration, reorder slides, set start/end dates, and publish to the selected screen.</p>
+      <ul>
+        <li>Different content per screen</li>
+        <li>Scheduled playlists</li>
+        <li>Remote refresh over HTTPS</li>
+        <li>Custom branding-free display</li>
+      </ul>
+    </section>
+  </main>
+  <footer>Private church signage project · No ads or third-party watermark in the custom player</footer>
+  <script src="app.js"></script>
+</body>
+</html>
