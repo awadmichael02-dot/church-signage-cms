@@ -43,6 +43,57 @@
     </section>
   </main>
   <footer>Private church signage project · No ads or third-party watermark in the custom player</footer>
+
+<section class="media-manager">
+  <h2>Church Announcements</h2>
+  <p>Sign in to upload announcements to your TVs.</p>
+
+  <form id="loginForm">
+    <label for="editorEmail">Editor email</label>
+    <input id="editorEmail" type="email" required
+      autocomplete="username" placeholder="Your email">
+
+    <label for="editorPassword">Password</label>
+    <input id="editorPassword" type="password" required
+      autocomplete="current-password" placeholder="Your password">
+
+    <button type="submit">Sign in</button>
+    <button type="button" id="signOutButton" hidden>Sign out</button>
+  </form>
+
+  <hr>
+
+  <form id="uploadForm">
+    <label for="mediaTitle">Announcement title</label>
+    <input id="mediaTitle" type="text" required
+      maxlength="150" placeholder="e.g. Sunday Divine Liturgy">
+
+    <label for="mediaScreen">Display on</label>
+    <select id="mediaScreen" required>
+      <option value="lobby">New Lobby</option>
+      <option value="sanctuary">Hallway</option>
+      <option value="both">Both TVs</option>
+    </select>
+
+    <label for="mediaFile">Choose an image or MP4 video</label>
+    <input id="mediaFile" type="file"
+      accept="image/*,video/mp4" required>
+
+    <div id="mediaPreview"></div>
+
+    <button type="submit" id="uploadButton">
+      Upload announcement
+    </button>
+  </form>
+
+  <p id="mediaStatus" role="status" aria-live="polite">
+    Please sign in before uploading.
+  </p>
+
+  <h3>Uploaded announcements</h3>
+  <div id="mediaLibrary"></div>
+</section>
+
   <script src="config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
